@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1444851166468.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1CA090D2",
+    "lastKnownWriteTime" : 1444851159,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "54uim6i2hx",
+        "caption" : "stockprice",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=stockprice&cache_key=54uim6i2hx",
+        "displayedObservations" : "3371",
+        "environment" : "",
+        "object" : "stockprice",
+        "totalObservations" : "3371",
+        "variables" : "7"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

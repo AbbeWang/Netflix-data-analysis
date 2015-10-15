@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1444853864030.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D048AE5A",
+    "lastKnownWriteTime" : 732172859496099700,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "lxb1ylhpgz",
+        "caption" : "revenue1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=revenue1&cache_key=lxb1ylhpgz",
+        "displayedObservations" : 30,
+        "environment" : "",
+        "object" : "revenue1",
+        "totalObservations" : 30,
+        "variables" : 19
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
