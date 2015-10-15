@@ -6,7 +6,7 @@ revenue = read.csv("revenue.csv", nrows = 54)
 library(ggplot2)
 library(lubridate)
 revenue$Period = dmy_hm(revenue$Period)
-#qplot(revenue$Period, revenue$NFLX.Revenue..Quarterly., geom = c("point","smooth"))
+qplot(revenue$Period, revenue$NFLX.Revenue..Quarterly., geom = c("point","smooth"))
 qplot(revenue$Period, log(revenue$NFLX.Revenue..Quarterly.), geom = c("point","smooth"))
 
 
@@ -18,8 +18,7 @@ qplot(stockprice$Date,log(stockprice$Adj.Close), geom = c("point","smooth"))
 
 visitor$V3 = gsub(x=visitor$V3,pattern="04:00:00+00:00",replacement="",fixed=T)
 visitor$V3 = gsub(x=visitor$V3,pattern="05:00:00+00:00",replacement="",fixed=T)
-visitor$V3 = ymd(visitor$V3)
-#qplot(visitor$V3,visitor$V4, geom = c("point","smooth"))
+qplot(visitor$V3,visitor$V4, geom = c("point","smooth"))
 qplot(visitor$V3, log(visitor$V4), geom = c("point","smooth"))
 
 
@@ -29,8 +28,15 @@ ml = lm(revenue1$NFLX.Revenue..Quarterly. ~ revenue1$Period)
 plot(ml$residuals ~ revenue1$Period)
 abline(h = 0, lty = 3)
 
+qplot(revenue1$Period, revenue1$NFLX.Revenue..Quarterly., geom = c("point","smooth"), method = "lm")
+qplot(revenue1$Period, log(revenue1$NFLX.Revenue..Quarterly.), geom = c("point","smooth"), method = "lm")
+
+
+
 qplot(revenue1$Period, revenue1$NFLX.Revenue..Quarterly., geom = c("point","smooth"))
 qplot(revenue$Period, revenue$NFLX.Revenue..Quarterly., geom = c("point","smooth"))
+
+
 
 qplot(visitor$V3,visitor$V4, geom = c("point","smooth"))
 plot(ml$residuals ~ revenue1$Period)
@@ -44,8 +50,6 @@ abline(h = 0, lty = 3)
 
 summary(ml2)
 
-plot(log(revenue1$NFLX.Revenue..Quarterly.) ~ revenue1$Period)
-abline(ml2)
 
 x = ymd("2015/09/30")
 y = ml2$coefficients[1] + ml2$coefficients[2]*as.numeric(x)
@@ -82,17 +86,18 @@ ggplot(m1, aes(revenue.Period)) +
 
 
 
-plot(m1$revenue.Period, m1$revenue.NFLX.Revenue..Quarterly.)
+
+plot(m1$revenue.Period, m1$visitor.V4, axes = FALSE, xlab = "", ylab = "", col = "grey", type = "l")
 par(new = TRUE)
 plot(m1$revenue.Period, m1$stockprice.Adj.Close, axes = FALSE, xlab = "", ylab = "", col = "red", type = "l")
 par(new = TRUE)
-plot(m1$revenue.Period, m1$visitor.V4, axes = FALSE, xlab = "", ylab = "", col = "green", type = "l")
+plot(m1$revenue.Period, m1$revenue.NFLX.Revenue..Quarterly.)
 
 
 
 
 m2 = m1[1467:4284,]
-plot(m2$revenue.Period, m2$visitor.V4, axes = FALSE, xlab = "", ylab = "", col = "green", type = "l")
+plot(m2$revenue.Period, log(m2$visitor.V4), axes = FALSE, xlab = "", ylab = "", col = "green", type = "l")
 par(new = TRUE)
 plot(m2$revenue.Period, m2$stockprice.Adj.Close, axes = FALSE, xlab = "", ylab = "", col = "red", type = "l")
 par(new = TRUE)
