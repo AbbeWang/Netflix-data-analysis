@@ -118,4 +118,24 @@ y = m4$coefficients[1] + m4$coefficients[2]*x
 
 
 
+# traffic * weather
+qplot(avisitor$V3,avisitor$V4, geom = c("point","smooth"))
+qplot(avisitor$V3, log(avisitor$V4), geom = c("point","smooth"))
+
+avisitor$V3 = as.factor(avisitor$V3)
+df1 = tapply(avisitor$V4, avisitor$V3, sum)
+n = names(df1)
+df = data.frame(as.POSIXct(n), df1, row.names = NULL)
+
+qplot(df$as.POSIXct.n.,df$df1, geom = c("point","smooth"))
+qplot(df$as.POSIXct.n.,log(df$df1), geom = c("point","smooth"))
+
+
+#plot together
+plot(arevenue$Period, arevenue$AMZN.Revenue..Quarterly., axes = FALSE, xlab = "", ylab = "")
+par(new = TRUE)
+plot(df$as.POSIXct.n.,df$df1, xlab = "", ylab = "", col = "red", type = "l")
+
+
+
 
