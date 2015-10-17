@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445040290512.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6A346633",
+    "lastKnownWriteTime" : 1445040062,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "lp2ye05mwi",
+        "caption" : "q3_revenue",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=q3_revenue&cache_key=lp2ye05mwi",
+        "displayedObservations" : 19,
+        "environment" : "",
+        "object" : "q3_revenue",
+        "totalObservations" : 19,
+        "variables" : 19
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

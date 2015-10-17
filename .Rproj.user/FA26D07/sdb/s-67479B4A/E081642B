@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445039172343.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E081642B",
+    "lastKnownWriteTime" : 12948304202498162,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "3u2gl0lwhs",
+        "caption" : "arevenue1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=arevenue1&cache_key=3u2gl0lwhs",
+        "displayedObservations" : 22,
+        "environment" : "",
+        "object" : "arevenue1",
+        "totalObservations" : 22,
+        "variables" : 19
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
