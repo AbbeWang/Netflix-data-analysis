@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445153330831.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8358E35E",
+    "lastKnownWriteTime" : 23362706540462126,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "qortfq7isw",
+        "caption" : "astock",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=astock&cache_key=qortfq7isw",
+        "displayedObservations" : 1964,
+        "environment" : "",
+        "object" : "astock",
+        "totalObservations" : 1964,
+        "variables" : 7
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

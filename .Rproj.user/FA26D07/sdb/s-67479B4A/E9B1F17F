@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445155750014.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E9B1F17F",
+    "lastKnownWriteTime" : 12948304202498162,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "b0rsd90kzz",
+        "caption" : "weather",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=weather&cache_key=b0rsd90kzz",
+        "displayedObservations" : 3180,
+        "environment" : "",
+        "object" : "weather",
+        "totalObservations" : 3180,
+        "variables" : 12
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

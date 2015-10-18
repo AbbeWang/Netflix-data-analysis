@@ -131,10 +131,53 @@ qplot(df$as.POSIXct.n.,df$df1, geom = c("point","smooth"))
 qplot(df$as.POSIXct.n.,log(df$df1), geom = c("point","smooth"))
 
 
+# getting weather data
+weather = read.table("Complete_TAVG_complete.txt",header=FALSE, skip = 3093)
+weather = weather[,1:4]
+weather$date = ymd("2007/8/15","2007/9/15","2007/10/15","2007/11/15","2007/12/15","2008/1/15"
+                   ,"2008/2/15","2008/3/15","2008/4/15","2008/5/15","2008/6/15","2008/7/15"
+                   ,"2008/8/15","2008/9/15","2008/10/15","2008/11/15","2008/12/15","2009/1/15"
+                   ,"2009/2/15","2009/3/15","2009/4/15","2009/5/15","2009/6/15","2009/7/15"
+                   ,"2009/8/15","2009/9/15","2009/10/15","2009/11/15","2009/12/15","2010/1/15"
+                   ,"2010/2/15","2010/3/15","2010/4/15","2010/5/15","2010/6/15","2010/7/15"
+                   ,"2010/8/15","2010/9/15","2010/10/15","2010/11/15","2010/12/15","2011/1/15"
+                   ,"2011/2/15","2011/3/15","2011/4/15","2011/5/15","2011/6/15","2011/7/15"
+                   ,"2011/8/15","2011/9/15","2011/10/15","2011/11/15","2011/12/15","2012/1/15"
+                   ,"2012/2/15","2012/3/15","2012/4/15","2012/5/15","2012/6/15","2012/7/15"
+                   ,"2012/8/15","2012/9/15","2012/10/15","2012/11/15","2012/12/15","2013/1/15"
+                   ,"2013/2/15","2013/3/15","2013/4/15","2013/5/15","2013/6/15","2013/7/15"
+                   ,"2013/8/15","2013/9/15","2013/10/15","2013/11/15","2013/12/15","2014/1/15"
+                   ,"2014/2/15","2014/3/15","2014/4/15","2014/5/15","2014/6/15","2014/7/15"
+                   ,"2014/8/15","2014/9/15","2014/10/15","2014/11/15","2014/12/15")
+
+# plot monthly weather data
+qplot(weather$date, weather$V3, geom = c("point","smooth"))
+
 #plot together
-plot(arevenue$Period, arevenue$AMZN.Revenue..Quarterly., axes = FALSE, xlab = "", ylab = "")
+plot(weather$date, weather$V3, axes = FALSE, xlab = "", ylab = "")
 par(new = TRUE)
 plot(df$as.POSIXct.n.,df$df1, xlab = "", ylab = "", col = "red", type = "l")
+
+
+
+
+# getting Amazon stock data
+astock = read.csv("table (1).csv",header=TRUE, nrows = 1964)
+astock$Date = ymd(astock$Date)
+
+# plot stock data
+qplot(astock$Date, astock$Adj.Close, geom = c("point","smooth"))
+qplot(astock$Date, log(astock$Adj.Close), geom = c("point","smooth"))
+
+
+#plot revenue, traffic and stock together
+plot(arevenue$Period, arevenue$AMZN.Revenue..Quarterly., axes = FALSE, xlab = "", ylab = "")
+par(new = TRUE)
+plot(df$as.POSIXct.n.,df$df1, xlab = "",axes = FALSE, ylab = "", col = "grey", type = "l")
+par(new = TRUE)
+plot(astock$Date, astock$Adj.Close, xlab = "", ylab = "", col = "red", type = "l")
+legend("topleft", pch=1, col = "black", legend = "revenue")
+legend("topleft", col = c("grey","red"), legend = c("visitor", "Adj.Close"), lwd = 1)
 
 
 
