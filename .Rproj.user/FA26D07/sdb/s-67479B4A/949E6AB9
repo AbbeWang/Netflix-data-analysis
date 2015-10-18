@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445196202049.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "949E6AB9",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "40dayg930m",
+        "caption" : "avisitor",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=avisitor&cache_key=40dayg930m",
+        "displayedObservations" : 21959,
+        "environment" : "",
+        "object" : "avisitor",
+        "totalObservations" : 21959,
+        "variables" : 6
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

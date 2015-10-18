@@ -1,3 +1,6 @@
+library(ggplot2)
+library(lubridate)
+
 # getting amazon visitor data
 avisitor = read.csv("web_traffic_data_-_updated.csv",header=FALSE, nrows = 45394,skip = 77197)
 avisitor = avisitor[c(1:21863, 45299:45394),]
@@ -178,6 +181,33 @@ par(new = TRUE)
 plot(astock$Date, astock$Adj.Close, xlab = "", ylab = "", col = "red", type = "l")
 legend("topleft", pch=1, col = "black", legend = "revenue")
 legend("topleft", col = c("grey","red"), legend = c("visitor", "Adj.Close"), lwd = 1)
+
+
+
+
+
+# get amazon, ebay and overstock data
+revenue3 = read.csv("revenue_shop.csv")
+revenue3$Period = dmy_hm(revenue3$Period)
+
+# plot 3 revenue data
+qplot(Period, Revenue, data = revenue3, color = Company, geom = c("point","smooth"), method="lm")
+qplot(Period, Revenue, data = revenue3, color = Company, geom = c("point","smooth"))
+
+ggplot(data = revenue3, aes(x=Period, y=Revenue)) + geom_line(aes(color = Company))
+
+
+# plot pie chart
+bp<- ggplot(data = revenue3, aes(x=Period, y=Revenue, fill=Company))+geom_bar(width = 5, stat = "identity",aes(color = Company))
+bp
+pie <- bp + coord_polar("y", start=0)
+pie
+
+
+
+
+
+
 
 
 

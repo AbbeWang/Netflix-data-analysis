@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445192235200.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A9787D47",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "hzkrdhnjpw",
+        "caption" : "revenue3",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=revenue3&cache_key=hzkrdhnjpw",
+        "displayedObservations" : 234,
+        "environment" : "",
+        "object" : "revenue3",
+        "totalObservations" : 234,
+        "variables" : 3
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
